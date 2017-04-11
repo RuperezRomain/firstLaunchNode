@@ -1,0 +1,23 @@
+{
+  "name": "firstlaunchnode",
+  "version": "0.0.1",
+  "description": "initiation to nodejs",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "dependencies":{
+  "express":"4.13.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://RuperezRomain@github.com/RuperezRomain/firstLaunchNode"
+  },
+  "author": "ruperez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RuperezRomain/firstLaunchNode/issues"
+  },
+  "homepage": "https://github.com/RuperezRomain/firstLaunchNode#readme"
+}

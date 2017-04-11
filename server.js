@@ -1,18 +1,21 @@
-const http = require('http');
+var express = require('express');
+var appli = express();
 
-const hostname = '127.0.0.1';
-
-const port = 8080;
-
-const server = http.createServer(
-	(request, response) => {
-	response.statusCode = 200;
-	response.setHeader('Content-Type', 'text/plain');
-	response.end('Bonjour Béziers\n');
+appli.get('/',
+	function (request, response){
+	response.send("Je sais renvoyer une réponse, je suis un bon serveur");
 	}
-
 );
 
-server.listen(port, hostname, function(){
-	console.log('Le serveur écoute ici : http://' + hostname + ":" + port );
+appli.get('/user',
+	function (request, response){
+	var retour = {nom : "ruperez", prenom : "romain"};
+	response.json(retour);
+	}
+);
+
+appli.listen(8080,function(){
+	console.log("j'écoute rien du tout");
 });
+
+
