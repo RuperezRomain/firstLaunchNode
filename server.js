@@ -3,7 +3,8 @@ var appli = express();
 
 appli.get('/',
 	function (request, response){
-	response.send("Je sais renvoyer une réponse, je suis un bon serveur");
+            response.sendFile( __dirname + '/views/newview.html');
+//	response.send("Je sais renvoyer une réponse, je suis un bon serveur");
 	}
 );
 
